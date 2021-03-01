@@ -1,5 +1,5 @@
-# Betting app
-Betting app for Android developed with Kotlin for Software Engineering course at Vilnius University.
+# Beteasier
+Betting app developed for Android using Kotlin for Software Engineering course at Vilnius University.
 
 ➡ New documentation created by:
 Tautvydas Jackevičius
