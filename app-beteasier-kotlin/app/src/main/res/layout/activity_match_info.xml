@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:src="@drawable/ic_football" />
+
+    <TextView
+        android:id="@+id/dateTimeView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:layout_margin="10dp"
+        app:layout_constraintTop_toBottomOf="@id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="2020-10-02 19:00"/>
+
+    <View
+        android:id="@+id/headerDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_margin="10dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/dateTimeView" />
+
+    <TextView
+        android:id="@+id/firstTeamView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_margin="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dateTimeView"
+        tools:text="Real Madrid" />
+
+    <TextView
+        android:id="@+id/firstRateView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_margin="12dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/firstTeamView"
+        tools:text="1.5x" />
+
+    <EditText
+        android:id="@+id/firstTeamBet"
+        style="@style/DefaultEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:inputType="number"
+        android:hint="Bet Amount"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/firstRateView" />
+
+    <TextView
+        android:id="@+id/firstTeamScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:layout_margin="12dp"
+        android:visibility="gone"
+        app:layout_constraintStart_toStartOf="@id/dateTimeView"
+        app:layout_constraintTop_toBottomOf="@id/firstRateView"
+        tools:text="1" />
+
+    <TextView
+        android:id="@+id/scoreDivider"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:layout_margin="12dp"
+        android:text="-"
+        android:visibility="gone"
+        app:layout_constraintBaseline_toBaselineOf="@id/firstTeamScore"
+        app:layout_constraintStart_toStartOf="@id/firstTeamScore"
+        app:layout_constraintEnd_toEndOf="@id/secondTeamScore"/>
+
+    <TextView
+        android:id="@+id/secondTeamScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:layout_margin="12dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@id/dateTimeView"
+        app:layout_constraintTop_toBottomOf="@id/firstRateView"
+        tools:text="2" />
+
+    <TextView
+        android:id="@+id/secondTeamView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_margin="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dateTimeView"
+        tools:text="Barcelona" />
+
+    <TextView
+        android:id="@+id/secondRateView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="18sp"
+        android:layout_margin="12dp"
+        app:layout_constraintTop_toBottomOf="@id/secondTeamView"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:text="1.6x" />
+
+    <EditText
+        android:id="@+id/secondTeamBet"
+        style="@style/DefaultEditText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:inputType="number"
+        android:hint="Bet Amount"
+        app:layout_constraintTop_toBottomOf="@id/secondRateView"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <View
+        android:id="@+id/bottomDivider"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="10dp"
+        android:background="@android:color/darker_gray"
+        app:layout_constraintTop_toBottomOf="@id/firstTeamBet" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/betButton"
+        style="@style/DefaultButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Bet"
+        app:layout_constraintTop_toBottomOf="@id/bottomDivider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/bettingAmountLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:layout_margin="12dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/firstTeamScore"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="Won:" />
+
+    <TextView
+        android:id="@+id/bettingAmountView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:layout_margin="12dp"
+        android:visibility="gone"
+        app:layout_constraintBaseline_toBaselineOf="@id/bettingAmountLabel"
+        app:layout_constraintStart_toEndOf="@id/bettingAmountLabel"
+        tools:text="20.0EUR" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

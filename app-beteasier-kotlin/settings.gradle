@@ -1,0 +1,2 @@
+rootProject.name='BetEasier'
+include ':app'

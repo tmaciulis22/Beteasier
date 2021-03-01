@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">BetEasier</string>
+
+    <string-array name="category_array">
+        <item>All</item>
+        <item>Football</item>
+        <item>Basketball</item>
+        <item>Baseball</item>
+    </string-array>
+</resources>

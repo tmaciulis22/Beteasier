@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/startLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="16dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/endLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="16dp" />
+
+    <TextView
+        android:id="@+id/emailLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Email:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/startLine"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/emailView"
+        style="@style/DefaultEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:enabled="false"
+        android:focusable="false"
+        app:layout_constraintBaseline_toBaselineOf="@id/emailLabel"
+        app:layout_constraintEnd_toEndOf="@id/endLine"
+        app:layout_constraintStart_toEndOf="@id/emailLabel" />
+
+    <TextView
+        android:id="@+id/balanceLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Balance:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/startLine"
+        app:layout_constraintTop_toBottomOf="@id/emailLabel" />
+
+    <EditText
+        android:id="@+id/balanceView"
+        style="@style/DefaultEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:enabled="false"
+        android:focusable="false"
+        android:textSize="20sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/balanceLabel"
+        app:layout_constraintEnd_toEndOf="@id/endLine"
+        app:layout_constraintStart_toEndOf="@id/balanceLabel" />
+
+    <TextView
+        android:id="@+id/nameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Name:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/startLine"
+        app:layout_constraintTop_toBottomOf="@id/balanceLabel" />
+
+    <EditText
+        android:id="@+id/nameEditView"
+        style="@style/DefaultEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBaseline_toBaselineOf="@id/nameLabel"
+        app:layout_constraintEnd_toEndOf="@id/endLine"
+        app:layout_constraintStart_toEndOf="@id/nameLabel" />
+
+    <TextView
+        android:id="@+id/surnameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:maxLines="1"
+        android:text="Surname:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/startLine"
+        app:layout_constraintTop_toBottomOf="@id/nameLabel" />
+
+    <EditText
+        android:id="@+id/surnameEditView"
+        style="@style/DefaultEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBaseline_toBaselineOf="@id/surnameLabel"
+        app:layout_constraintEnd_toEndOf="@id/endLine"
+        app:layout_constraintStart_toEndOf="@id/surnameLabel" />
+
+    <TextView
+        android:id="@+id/countryLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:maxLines="1"
+        android:text="Country:"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/startLine"
+        app:layout_constraintTop_toBottomOf="@id/surnameLabel" />
+
+    <EditText
+        android:id="@+id/countryEditView"
+        style="@style/DefaultEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBaseline_toBaselineOf="@id/countryLabel"
+        app:layout_constraintEnd_toEndOf="@id/endLine"
+        app:layout_constraintStart_toEndOf="@id/countryLabel" />
+
+    <TextView
+        android:id="@+id/monthlyLimitLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="Monthly limit(EUR):"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/startLine"
+        app:layout_constraintTop_toBottomOf="@id/countryLabel" />
+
+    <EditText
+        android:id="@+id/monthlyLimitEditView"
+        style="@style/DefaultEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@id/monthlyLimitLabel"
+        app:layout_constraintEnd_toEndOf="@id/endLine"
+        app:layout_constraintStart_toEndOf="@id/monthlyLimitLabel" />
+
+    <TextView
+        android:id="@+id/betLimitLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:maxLines="1"
+        android:text="Bet limit(EUR):"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@id/startLine"
+        app:layout_constraintTop_toBottomOf="@id/monthlyLimitLabel" />
+
+    <EditText
+        android:id="@+id/betLimitEditView"
+        style="@style/DefaultEditText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:inputType="number"
+        app:layout_constraintBaseline_toBaselineOf="@id/betLimitLabel"
+        app:layout_constraintEnd_toEndOf="@id/endLine"
+        app:layout_constraintStart_toEndOf="@id/betLimitLabel" />
+
+    <Button
+        android:id="@+id/buttonUpdateInfo"
+        style="@style/DefaultButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="8dp"
+        android:text="Update"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/betLimitLabel" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addFundsButton"
+        style="@style/DefaultButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:text="Add funds"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/startLine" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/deleteAccountButton"
+        style="@style/DefaultButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="22dp"
+        android:text="Delete Account"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/endLine" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
