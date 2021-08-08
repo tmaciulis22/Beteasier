@@ -2,7 +2,7 @@
 Betting app developed for Android using Kotlin for Software Engineering course at Vilnius University.
 
 ➡ New documentation and app created by:  
-Tautvydas Mačiulis
+Tautvydas Mačiulis  
 Tautvydas Jackevičius  
 Laima Volungevičiūtė  
 Andrius Bušma
